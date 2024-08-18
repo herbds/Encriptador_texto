@@ -10,30 +10,33 @@
         <div class="container">
             <div class="encriptar">
                 <textarea 
-                name="texto" 
-                class="texto" 
-                id="texto" 
-                cols="30" 
-                rows="10" 
-                placeholder="Inserte el texto">
-            </textarea>
+                    name="texto" 
+                    class="texto" 
+                    id="texto" 
+                    cols="30" 
+                    rows="10" 
+                    placeholder="Inserte el texto aquí"
+                    ></textarea>
+            <div class="terminos">
+                <p>Solo letras minúsculas y sin acento.</p>
+            </div> 
             <div class="botones">
                 <button class="btn-encriptar" type="button" onclick="encriptar()"> Encriptar texto </button>
-                <button class="btn-desencriptar" type="button" onclick="desencriptar"> Desencriptar texto</button>
+                <button class="btn-desencriptar" type="button" onclick="desencriptar()"> Desencriptar texto</button>
             </div>    
         </div>
             <div class="encriptado">
-                <img src="" alt="" id="Imagen encriptado">
-                <div class="mensaje_encriptado" id="Mensaje encriptado">
-                    <h2 id="Título mensaje"> Mensaje no encontrado </h2>
-                    <p id="Parrafo"> Ingrese el parrafo </p>
+                <img src="imagenes\Binario.jpeg" alt="" id="muñeco">
+                <div class="mensaje-encriptado" id="mensaje-encriptado">
+                    <h2 id="titulo-mensaje"> Mensaje no encontrado </h2>
+                    <p id="parrafo"> Ingrese el parrafo </p>
                     <textarea 
-                    name="Mensaje" 
-                    class="Mensaje" 
-                    id="Mensaje" 
+                    name="mensaje" 
+                    class="mensaje" 
+                    id="mensaje" 
                     cols="30" 
                     rows="10">
-                </textarea>
+                    </textarea>
                 </div>
             </div>
         </div>

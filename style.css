@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #f3f5fc;
+}
+
+.texto {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 15%;
+    left: 12%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+.texto::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    line-height: 250%;
+    left: 55%;
+    font-style: normal;
+    font-weight: 200;
+    color: #0a3871;
+}
+
+.texto:focus,.texto:active {
+    border: none;
+    outline: none;
+}
+
+.terminos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.terminos p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    opacity: 0.8;
+    flex: none;
+    color: #495057;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.encriptado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    left: 55%;
+    top: 15%;
+    background: #ffff;
+    border-radius: 32px;
+
+}
+.btn-encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0b88dd;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 80%;
+    text-align: center;
+    color: #ffff
+}
+
+.btn-desencriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0b88dd;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 80%;
+    text-align: center;
+    color: #ffff
+}
+
+.btn-encriptar:hover,.btn-desencriptar:hover {
+    margin: 0.5%;
+    width: 25%;
+    padding: 1.5%;
+    height: 50%;
+}
+
+.mensaje-encriptado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    padding: 2%;
+    gap: 20px;
+    top: 40%;
+}
+
+.mensaje-encriptado h2 {
+    width: 80%;
+    font-size: 20px;
+    font-weight: 600px;
+    line-height: 200%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #343a40;
+}
+
+.mensaje-encriptado p {
+    width: 90%;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 150%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #495057;
+}
+
+.encriptado img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    opacity: 0.5;
+    
+}
+
+@media (max-width: 57.5em) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .encriptar {
+        width: 100%;
+    }
+
+    .texto {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 65%;
+    }
+
+    .terminos p {
+        font-size: 16px;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .btn-encriptar , .btn-desencriptar {
+        width: 45%;
+        border-radius: 16px;
+    }
+
+    .btn-encriptar:hover , .btn-desencriptar:hover {
+        margin: 0.3%;
+        width: 46%;
+        padding: 1.8%;
+    }
+
+    .encriptado {
+        width: 80%;
+        left: 10%;
+        height: 15%;
+        top: 80%;
+    }
+
+    .mensaje-encriptado {
+        width: 100%;
+        top: 5%;
+    }
+
+    .encriptado img {
+        top: 0%;
+        display: none;
+        visibility: hidden;
+    }
+}
