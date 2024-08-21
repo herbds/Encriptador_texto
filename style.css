@@ -8,6 +8,7 @@
     width: 100vw;
     height: 100vh;
     background: #f3f5fc;
+    
 }
 
 .texto {
@@ -20,8 +21,8 @@
     font-family: 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 150%;
+    font-size: 20px;
+    line-height: 420%;
     background-color: #f3f5fc;
 }
 
@@ -35,7 +36,7 @@
     color: #0a3871;
 }
 
-.texto:focus,.texto:active {
+.texto:focus, .texto:active {
     border: none;
     outline: none;
 }
@@ -59,13 +60,34 @@
     font-size: 12px;
     line-height: 150%;
     opacity: 0.8;
-    flex: none;
     color: #495057;
-    order: 1;
-    flex-grow: 0;
 }
 
 .botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 1%;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+    gap: 8px;
+}
+
+.encriptado {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 30%;
+    height: 70%;
+    left: 55%;
+    top: 10%;
+    background: #fff;
+    border-radius: 32px;
+}
+
+.copiar {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -73,54 +95,51 @@
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 82%;
+    top: 105%;
+    height: 20%;
 }
 
-.encriptado {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    width: 30%;
-    height: 70%;
-    left: 55%;
-    top: 15%;
-    background: #ffff;
-    border-radius: 32px;
-
-}
-.btn-encriptar {
+.btn-encriptar, .btn-desencriptar {
     align-items: center;
     justify-content: center;
     padding: 2%;
     gap: 8px;
-    width: 25%;
+    width: 23%;
     background-color: #0b88dd;
     border-radius: 24px;
     border: 1px solid #0a3871;
     font-family: 'Times New Roman', Times, serif;
     line-height: 80%;
     text-align: center;
-    color: #ffff
+    color: #fff;
 }
 
-.btn-desencriptar {
-    align-items: center;
-    justify-content: center;
-    padding: 2%;
-    gap: 8px;
-    width: 25%;
-    background-color: #0b88dd;
-    border-radius: 24px;
-    border: 1px solid #0a3871;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 80%;
-    text-align: center;
-    color: #ffff
-}
-
-.btn-encriptar:hover,.btn-desencriptar:hover {
+.btn-encriptar:hover, .btn-desencriptar:hover {
     margin: 0.5%;
-    width: 25%;
+    width: 22%;
+    padding: 1.5%;
+    height: 50%;
+}
+
+.btn-copiar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 120%;
+    height: 60%;
+    background-color: #0b88dd;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 80%;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-copiar:hover {
+    margin: 0.5%;
+    width: 120%;
     padding: 1.5%;
     height: 50%;
 }
@@ -139,84 +158,97 @@
 
 .mensaje-encriptado h2 {
     width: 80%;
-    font-size: 20px;
-    font-weight: 600px;
+    font-size: 25px;
+    font-weight: 600;
     line-height: 200%;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
     color: #343a40;
 }
 
 .mensaje-encriptado p {
     width: 90%;
-    font-size: 16px;
-    font-weight: 400px;
+    font-size: 22px;
+    font-weight: 400;
     line-height: 150%;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
     color: #495057;
 }
 
+/* Estilo de la imagen y el textarea de texto copiado */
 .encriptado img {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0%;
+    top: 0;
     opacity: 0.5;
-    
+    z-index: 1;
+    border: none;
 }
 
+.texto_copia {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    top: -400%;
+    left: 6%;
+    border: none;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    background-color: transparent;
+    z-index: 2; /* Para superponerlo sobre la imagen */
+    display: none; /* Se oculta inicialmente */
+}
+
+
 @media (max-width: 57.5em) {
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
-    }
-    
-    .encriptar {
-        width: 100%;
     }
 
     .texto {
         width: 80%;
-        height: 60%;
-        left: 10%;
+        height: 35%;
+        left: 15%;
         top: 5%;
+        font-size: 15px;
     }
 
     .terminos {
         width: 80%;
-        left: 10%;
-        top: 65%;
-    }
-
-    .terminos p {
-        font-size: 16px;
+        left: 15%;
+        top: 45%;
     }
 
     .botones {
-        width: 80%;
+        width: 90%;
         left: 10%;
-        top: 70%;
+        top: 50%;
+        gap: 4%;
     }
 
-    .btn-encriptar , .btn-desencriptar {
-        width: 45%;
-        border-radius: 16px;
+    .btn-encriptar, .btn-desencriptar {
+        width: 35%;
+        border-radius: 12px;
+        padding: 1.5%;
     }
 
     .btn-encriptar:hover , .btn-desencriptar:hover {
-        margin: 0.3%;
-        width: 46%;
-        padding: 1.8%;
+        width: 35%;
+        padding: 1.5%;
+        height: 50%;
     }
-
     .encriptado {
-        width: 80%;
+        width: 70%;
         left: 10%;
-        height: 15%;
-        top: 80%;
+        height: 20%;
+        top: 58%;
     }
 
     .mensaje-encriptado {
@@ -224,9 +256,41 @@
         top: 5%;
     }
 
-    .encriptado img {
+    .texto_copia    {
         top: 0%;
-        display: none;
-        visibility: hidden;
+    }
+
+    .encriptado h2 {
+        font-size: 16px;
+    }
+
+    .encriptado p {
+        font-size: 14px;
+    }
+    .texto::placeholder {
+        font-size: 20px;
+        line-height: 200%;
+    }
+
+    .btn-copiar {
+        top: 100%;
+        height: 80%;
+        border-radius: 14px;
+        width: 85%;
+
+    }
+
+    .btn-copiar:hover {
+        width: 85%;
+        padding: 2%;
+        height: 80%;
+    }
+
+    .encriptado img {
+        height: 100%;
+    }
+
+    .texto_copia {
+        font-size: 14px;
     }
 }

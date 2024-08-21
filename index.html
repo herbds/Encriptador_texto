@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Encriptador de Texto</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="imagenes\candado.jpg" type="image/x-icon">
-    </head>
-    <body>
-        <div class="container">
-            <div class="encriptar">
-                <textarea 
-                    name="texto" 
-                    class="texto" 
-                    id="texto" 
-                    cols="30" 
-                    rows="10" 
-                    placeholder="Inserte el texto aquí"
-                    ></textarea>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagenes/candado.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="encriptar">
+            <textarea 
+                name="texto" 
+                class="texto" 
+                id="texto" 
+                cols="30" 
+                rows="10" 
+                placeholder="Inserte el texto aquí"
+            ></textarea>
             <div class="terminos">
-                <p>Solo letras minúsculas y sin acento.</p>
+                <p>Solo letras minúsculas.</p>
             </div> 
             <div class="botones">
                 <button class="btn-encriptar" type="button" onclick="encriptar()"> Encriptar texto </button>
                 <button class="btn-desencriptar" type="button" onclick="desencriptar()"> Desencriptar texto</button>
             </div>    
         </div>
-            <div class="encriptado">
-                <img src="imagenes\Binario.jpeg" alt="" id="muñeco">
-                <div class="mensaje-encriptado" id="mensaje-encriptado">
-                    <h2 id="titulo-mensaje"> Mensaje no encontrado </h2>
-                    <p id="parrafo"> Ingrese el parrafo </p>
-                    <textarea 
-                    name="mensaje" 
-                    class="mensaje" 
-                    id="mensaje" 
-                    cols="30" 
-                    rows="10">
-                    </textarea>
-                </div>
+        <div class="encriptado">
+            <img src="imagenes/Binario.jpeg" alt="" id="imagen_encriptado">
+            <div class="mensaje-encriptado" id="mensaje-encriptado"> 
+                <h2 id="titulo-mensaje"> Mensaje no encontrado </h2>
+                <p id="parrafo"> Ingrese el párrafo </p>
+                <textarea 
+                    name="texto_copia" 
+                    class="texto_copia" 
+                    id="texto_copia"
+                    placeholder=""
+                    style="display: none;"
+                ></textarea>   
+            </div>
+            <div class="copiar">
+                <button class="btn-copiar" type="button" onclick="copiar()"> Copiar texto </button>
             </div>
         </div>
-    </body>
-    <script src="index.js"></script>
+    </div>
+</body>
+<script src="index.js"></script>
 </html>
